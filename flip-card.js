@@ -6,24 +6,18 @@ const isHoverSupported = () => {
 };
 
 flipCards.forEach(card => {
-    if (isHoverSupported()) {
-        // Hover behavior for devices that support hover
-        card.addEventListener('mouseenter', () => {
-            card.classList.add('flipped');
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.classList.remove('flipped');
-        });
-    } else {
-        // Click behavior for touch devices
-        card.addEventListener('click', () => {
-            if (!card.classList.contains('flipped')) {
-                card.classList.add('flipped');
-            } else {
-                card.classList.remove('flipped');
-            }
-        });
+    if (!isHoverSupported()) {
+        
+        // card.addEventListener('click', () => {
+            
+        //         card.classList.toggle('flipped');
+           
+        // });
+        card.addEventListener('touchend', () => {
+            
+            card.classList.toggle('flipped');
+       
+    });
     }
 });
 
