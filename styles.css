@@ -357,7 +357,7 @@ transform: rotateY(180deg);
 .flip-card-checkbox:checked + .flip-card-label .button-container {
   opacity: 1;
 }
-.flip-card:hover {
+.flip-card:hover .flip-card-label .button-container {
   opacity: 1;
 }
 .cta-button-primary {
